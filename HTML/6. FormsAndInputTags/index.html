@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="here we are leaning the Forms and input tags">
+    <title>Forms and input tags</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="post">
+        <h1>Taking your impormation</h1>
+        <div>
+            <label for="userName">Enter your USER name :- </label>
+            <input type="text" name="userName" id="userName" placeholder="USER NAME" autofocus>
+        </div>
+        <div>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">MALE</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">FEMALE</label>
+        </div>
+        <div>
+            <label for="ageCheck">are you above 18 : </label>
+            <input type="checkbox" name="ageCheck" id="ageCheck" value="yes" required>
+        </div>
+        <div>
+            <label for="comment">enter your comment</label>
+            <br>
+            <textarea name="comment" id="comment" rows="5" cols="20"></textarea>
+        </div>
+        <div>
+            <label for="fruits">Enter your favarate fruit : </label>
+            <select name="fruits" id="fruits">
+                <option value="apple">apple</option>
+                <option value="banana">banana</option>
+                <option value="charry">charry</option>
+            </select>
+        </div>
+        <div>
+            <label for="">you are _____</label>
+            <br>
+            <input type="radio" name="option" id="good" value="good">
+            <label for="good"> good</label>
+            <input type="radio" name="option" id="bad" value="bad">
+            <label for="bad"> bad</label>
+            <input type="radio" name="option" id="ok" value="ok">
+            <label for="ok"> ok</label>
+            <input type="radio" name="option" id="veryGood" value="very good">
+            <label for="veryGood"> very good</label>
+        </div>
+    </form>
+</body>
+
+</html>
