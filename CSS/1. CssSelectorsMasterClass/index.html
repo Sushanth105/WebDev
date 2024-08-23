@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors in css</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        /* element selector */
+        /* it will change the font color of all the div */
+        /* div{
+            color: orange;
+        } */
+        /* group selector */
+        div, span{
+            color: darkslategrey;
+        }
+        /* class selector */
+        .orange{
+            color: orange;
+        }
+        /* id selector */
+        #red{
+            color: red;
+        }
+        /* child selector */
+        div > p{
+            color: green;
+        }
+        /* descendant selector */
+        div p{
+            background-color: aqua;
+        }
+        /* Universal selectors */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* pseudo selector */
+        a:visited{
+            color: green;
+        }
+        a:link{
+            color: brown;
+        }
+        a:active{
+            background-color: white;
+        }
+        a:hover{
+            background-color: gold;
+        }
+        p:first-child{
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+    <div class="orange">
+        i am div1
+        <p>i an paragraph of a div</p>
+    </div>
+    <div id="red">
+        i am div2
+    </div>
+    <div>
+        <span>
+            <p>i am span</p>
+        </span>
+    </div>
+    <div>
+        <a href="https://google.com">go to google</a>
+    </div>
+    <div>
+        <a href="https://facebook.com">go to facebook</a>
+    </div>
+    <div class="one">
+        <p> this is one</p>
+        <p> this is two</p>
+    </div>
+</body>
+</html>
