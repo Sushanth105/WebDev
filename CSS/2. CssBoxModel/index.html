@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css box model</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .box{
+            background-color: aqua;
+        }
+        .box1{
+            color: darkgreen;
+            padding: 50px;
+            margin: 30px;
+            border: 10px solid orange;
+            height: 150px;
+            /* border-box means the hight=border+padding+content(variable) */
+            box-sizing: border-box;
+        }
+        .box2{
+            color: red;
+            padding: 50px;
+            margin: 25px;
+            border: 10px solid orange;
+            height: 150px;
+            box-sizing: border-box;
+        }
+        /* Margin collapse :- 
+            --> during the margin collapse the margin(gap) between the 2 element is the maximum one size 
+            --> here the box1 takes 30px margin i.e it consumes full gap
+            --> here the box1 takes 25px margin i.e it does not consumes full gap */
+    </style>
+</head>
+<body>
+    <div class="box box1">i am a box1</div>
+    <div class="box box2">i am a box2</div>
+</body>
+</html>
