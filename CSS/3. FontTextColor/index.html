@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font, text and color</title>
+    <style>
+        /* it contains both matemasie and poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Matemasie&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        h1{
+            text-align: center;
+            font-family: "Matemasie", sans-serif;
+        }
+        p{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style: italic;
+            font-weight: 700;
+            /* line-height: 4; */
+            /* letter-spacing: 5px; */
+            /* if we add different text-decorarion only lastly added property is exicute */
+            /* text-decoration: underline overline; */
+        }
+        h2{
+            text-transform: capitalize;
+            text-decoration: underline;
+            text-decoration-color: red;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 10px;
+            text-indent: 100px;
+        }
+        /* .lorem{
+            border: 5px solid blue;
+            width: 75px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        } */
+        .lorem{
+            border: 5px solid blue;
+            width: 145px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Fonts</h1>
+        <h2>about font</h2>
+        <p>This is the video on font</p>
+        <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque optio aperiam impedit minus, commodi molestias dolor pariatur hic officiis beatae perspiciatis necessitatibus repellat. Voluptatum totam eum hic aspernatur distinctio sint, repellendus incidunt, unde quae id aperiam esse. Vel perferendis deleniti quos iure atque! Iste, autem.</p>
+    </div>
+</body>
+</html>
