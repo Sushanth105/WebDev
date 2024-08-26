@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sizing</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* html{
+            font-size: 12px;
+        } */
+        .box{
+            border: 2px solid red;
+            /* here px is the Absolute Units i.e it is device independent */
+            width: 300px;
+        }
+        .box{
+            box-sizing: border-box;
+            border: 2px solid rgb(13, 255, 0);
+            /* here vw(viewport width) is the relative Units i.e it is device dependent */
+            width: 50vw;
+            margin: auto;
+        }
+        .container1{
+            box-sizing: border-box;
+            border: 2px solid rgb(13, 255, 0);
+            /* here vw(viewport width) is the relative Units i.e it is device dependent */
+            /* same way we can also use the vh(viewport hight) */
+            width: 50vw;
+            margin: 28px auto;
+        }
+        .container2{
+            box-sizing: border-box;
+            border: 2px solid rgb(13, 255, 0);
+            /* here vw(viewport width) is the relative Units i.e it is device dependent */
+            /* same way we can also use the vh(viewport hight) */
+            width: 50vw;
+            font-size: 16px;
+            margin: 28px auto;
+        }
+        .container2 p{
+            /* here the property of div is also applaied to p*/
+            /* em-Relative to the font size of the parent element.Eg:5em means the size would be 5 times the current font size.*/
+            /* if the font size is not mentioned in parent the defult value is 16 */
+            font-size: 2em;
+        }
+        .container2 p{
+            /* rem - Relative to the font size of the root element.*/
+            /* here the font size of the p is 2 times the font size of html(root element) */
+            font-size: 2rem;
+        }
+        .container2 p{
+            font-size: 2em;
+            /* 50% of parent */
+            width: 50%;
+        }
+        .container3{
+            box-sizing: border-box;
+            margin: 28px auto;
+            font-size: 22px;
+            border: 2px solid rgb(13, 255, 0);
+            /* this is used rarely */
+            width: 100vmin; /* in this device vmin=vh*/
+        }
+        .container4{
+            border: 2px solid orange;
+            box-sizing: border-box;
+            margin: 28px auto;
+            font-size: 2em;
+            width: 50vw;
+            /* height: 30vh; */
+            /* here the hight is automatically expand if the content is execids 30 */
+            min-height: 30vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        how are you?
+    </div>
+    <div class="container1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, minus.
+    </div>
+    <div class="container2">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, minus.</p>
+    </div>
+    <div class="container3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, minus.
+    </div>
+    <div class="container4">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet aut aperiam aliquam nihil corporis placeat earum. Reprehenderit doloribus labore ratione facilis, neque corporis, expedita odio accusantium doloremque cumque nobis placeat provident? Iure error pariatur sed laborum sequi asperiores rerum exercitationem consequuntur vero enim! Facilis ad omnis tenetur dolore natus! Qui?
+    </div>
+</body>
+</html>
