@@ -13,48 +13,52 @@
         /* it will change the font color of all the div */
         /* div{
             color: orange;
-        } */
-        /* group selector */
-        div, span{
-            color: darkslategrey;
-        }
-        /* class selector */
-        .orange{
-            color: orange;
-        }
-        /* id selector */
-        #red{
-            color: red;
-        }
-        /* child selector */
-        div > p{
-            color: green;
-        }
-        /* descendant selector */
-        div p{
-            background-color: aqua;
-        }
-        /* Universal selectors */
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        /* pseudo selector */
-        a:visited{
-            color: green;
-        }
-        a:link{
-            color: brown;
-        }
-        a:active{
-            background-color: white;
-        }
-        a:hover{
-            background-color: gold;
-        }
-        p:first-child{
-            background-color: darkkhaki;
-        }
+            } */
+            /* group selector */
+            div, span{
+                color: darkslategrey;
+            }
+            /* class selector */
+            .orange{
+                color: orange;
+            }
+            /* id selector */
+            #red{
+                color: red;
+            }
+            /* child selector */
+            div > p{
+                color: green;
+            }
+            /* descendant selector */
+            div p{
+                background-color: aqua;
+            }
+            /* Universal selectors */
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            /* pseudo selector */
+            a:visited{
+                color: green;
+            }
+            a:link{
+                color: brown;
+            }
+            a:active{
+                background-color: white;
+            }
+            a:hover{
+                background-color: gold;
+            }
+            p:first-child{
+                background-color: darkkhaki;
+            }
+            [data-x=a]{
+                background-color: rgba(255, 0, 0, 0.308);
+                color: white;
+            }
     </style>
 </head>
 <body>
@@ -79,6 +83,9 @@
     <div class="one">
         <p> this is one</p>
         <p> this is two</p>
+    </div>
+    <div>
+        <h3 data-x="a">hiiiiiiiii</h3>
     </div>
 </body>
 </html>
