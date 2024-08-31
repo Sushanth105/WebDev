@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow property</title>
+    <style>
+        .box{
+            height: 20vh;
+            width: 20vw;
+            border: 2px solid black;
+            /* overflow: hidden; */
+            /* overflow: scroll; */
+            /* basically the auto means if it is not overflowing then nothing will happen; if it is overflowing then the auto-->scroll */
+            overflow: auto;
+            /* overflow-x: hidden;
+            overflow-y: scroll;
+            overflow: hidden scroll; */
+        }
+        .box1{
+            height: 20vh;
+            width: 20vw;
+            border: 2px solid black;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolores culpa neque omnis! Nihil quibusdam nostrum ea placeat nemo dicta quos temporibus aspernatur quam, quod, saepe laborum sequi iusto debitis atque deserunt eveniet repellendus quidem repudiandae assumenda beatae necessitatibus. Error ea nihil nobis est fugiat, nostrum vitae fugit incidunt laboriosam.
+    </div>
+    <div class="box1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit dolores culpa neque omnis! Nihil quibusdam nostrum ea placeat nemo dicta quos temporibus aspernatur quam, quod, saepe laborum sequi iusto debitis atque deserunt eveniet repellendus quidem repudiandae assumenda beatae necessitatibus. Error ea nihil nobis est fugiat, nostrum vitae fugit incidunt laboriosam.
+    </div>
+</body>
+</html>

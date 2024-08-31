@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styling the list using css</title>
+    <style>
+        ul li{
+            /* this is used when we don't want any type of list-style */
+            /* list-style: none; */
+            /* the list-style and list-style-type does simmilar type od work */
+            list-style: disc;
+            list-style-type: "😀";
+            /* list-style-image: url('image.png'); */
+            background-color: yellow;
+            /* the list style is also include in this ba-co like stup */
+            list-style-position: inside;
+            border: 2px solid blue;
+        }
+        ul li{
+            /* here we have to use only 2 parameter because the one list-style is get overwrite */
+            list-style: disc inside "😀";
+            background-color: yellow;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+</body>
+</html>
