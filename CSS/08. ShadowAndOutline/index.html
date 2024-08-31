@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shadow and outlines</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: inline-block;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 5px 5px 15px  black ;
+        }
+        .box1{
+            /* box-shadow: h-offset v-offset blur spread color inset; */
+            display: inline-block;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 5px 5px 15px  black inset;
+        }
+        .box2{
+            /* the text shadow is not applied to the div */
+            /* text-shadow: h-offset v-offset blur color; */
+            display: inline-block;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            text-shadow: 5px 5px 15px black;
+        }
+        .box3{
+            /* outline: width style color; */
+            display: inline-block;
+            outline: 2px solid black;
+            outline-offset: 5px;
+            outline-color: aqua;
+            outline-style: dotted;
+            outline-width: 10px;
+            padding: 20px;
+            margin: 20px;
+            text-shadow: 5px 5px 15px black;
+        }
+        .box4{
+            /* here the outline is also takes the shape of border */
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 20%;
+            padding: 20px;
+            margin: 20px;
+            outline: 2px solid black;
+            outline-offset: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        i am box
+    </div>
+    <div class="box1">
+        i am box1
+    </div>
+    <p class="box2">Lorem ipsum dolor sit amet.</p>
+    <div class="box3">
+        i am box3
+    </div>
+    <div class="box4">
+        i am box4
+    </div>
+</body>
+</html>
