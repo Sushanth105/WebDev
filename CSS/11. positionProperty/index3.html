@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property-Fixed & sticky</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 10vh;
+            width: 70vw;
+            padding: 5px;
+            margin: 16px;
+        }
+        .box1 {
+            background-color: lawngreen;
+            /* here the position will be fixed */
+            /* position: fixed; */
+            /* here the position is moved untill it reach the top (basically is used to do the nev bar) */
+            position: sticky;
+            top: 0px;
+        }
+        .box2, .box3, .box4{
+            height: 40vh;   
+        }
+        .box2 {
+            background-color: aqua;
+        }
+        
+        .box3 {
+            background-color: fuchsia;
+        }
+        
+        .box4 {
+            background-color: darkgoldenrod;        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+</html>

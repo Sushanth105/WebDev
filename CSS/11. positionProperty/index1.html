@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property-absulute</title>
+        <style>
+            .about{
+                /* check by commenting the position */
+                /* if position property(except static) is present in its parent element then that element will be the relative position of absolute element  */
+                /* transform, filter and perspective can behave has position property */
+                position: relative;
+            }
+            .logo{
+                position: absolute;
+                right: 10px;
+                top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CodeWithHarry</h1>
+        <div class="about">
+            <p>Developer</p>
+            <p>founder of CodeWithHarry</p>
+            <img class="logo" src="image.png" alt="logo">
+        </div>
+    </body>
+    </html>
+</html>

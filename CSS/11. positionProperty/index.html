@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position property-relative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid black;
+            height: 10vh;
+            width: 70vw;
+            padding: 5px;
+            margin: 16px;
+        }
+        /* the default position is static */
+        .box1 {
+            background-color: lawngreen;
+            /* the z-index is give to reverse the thing i.e the box which is down will come above */
+            /* position: relative;
+            z-index: 1; */
+        }
+
+        .box2 {
+            background-color: aqua;
+            position: relative;
+            top: -38px;
+            left: 95px;
+        }
+
+        .box3 {
+            background-color: fuchsia;
+        }
+
+        .box4 {
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+
+</html>
