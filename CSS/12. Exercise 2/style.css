@@ -8,54 +8,56 @@ body{
 .card{
     background-color: white;
     border: 2px solid white;
-    height: 45vh;
-    width: 20vw;
-    margin: 10% auto;
-    border-radius: 3%;
-    position: relative;
+    margin: 50px 50px;
+    height: 450px;
+    width: 300px;
+    border-radius: 20px;
+    display: inline-block;
 }
 .image{
-    border-radius: 3%;
-    width: 95%;
-    height: 40%;
-    position: relative;
-    top: 1.5%;
-    left: 2.5%;
+    border-radius: 20px;
+    width: 290px;
+    height: 200px;
+    margin: 5px;
 }
 .list ul li{
     color: rgb(155, 153, 153);
     display: inline-block;
     background-color: white;
-    margin: 1%;
-    padding: 1.5%;
+    margin: 0px 0px 0px 10px;
+    padding: 3px;
     border: 2px solid rgb(239, 238, 238);
-    border-radius: 48%;
+    border-radius: 30px;
     position: relative;
-    left: 6%;
+    left: 5px;
 }
-.heading{
+.content{
     font-style: italic;
-    position: relative;
-    left: 4%;
+    margin: 5px 10px;
+    height: 160px;
+    overflow: hidden;
 }
 .content p{
     color: rgb(107, 107, 107);
-    font-style: italic;
-    width: 18vw;
-    height: 12vh;
-    position: absolute;
-    left: 4%;
-    line-height: 160%;
-    overflow: hidden;
+    line-height: 25px;
 }
 .bot{
-    display: inline-block;
+    text-align: center;
+}
+.bot button{
     font-style: italic;
     background-color: #d2e9f1;
     color: #2f9ecd;
-    border: 2px solid #d2e9f1;
-    border-radius: 35%;
-    position: absolute;
-    left: 40%;
-    top: 93%;
+    font-weight:500;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    cursor:pointer;
+}
+.bot button:hover{
+    background-color: rgb(194, 225, 246);
+    color: rgb(10, 136, 214);
+}
+.bot button:active{
+    background-color: #d2e9f1;
 }
