@@ -6,8 +6,7 @@ body{
     background-color: rgb(198, 197, 197);
 }
 .card{
-    background-color: white;
-    border: 2px solid white;
+    border: none;
     margin: 50px 50px;
     height: 450px;
     width: 300px;
