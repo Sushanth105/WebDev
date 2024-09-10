@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color: rgb(30, 248, 175);
+    --seccolor: rgb(170, 250, 224);
+}
+.navi{
+    /* background-color: rgb(30, 248, 175); */
+    background-color: var(--color);
+}
+ul{
+    display: flex;
+    list-style: none;
+}
+ul li{
+    margin: 5px;
+}
+.content{
+    /* background-color: rgb(170, 250, 224); */
+    background-color: var(--seccolor);
+}
+ul li:first-child{
+    --color: red;
+    /* if the --color variable is not found then apply green */
+    background-color: var(--color, green);
+}

@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --first: rgb(24, 194, 240);
+    --color: white;
+    --second: rgb(150, 230, 252);
+}
+body{
+    background-color: var(--second);
+}
+nav{
+    background-color: var(--first);
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    color: var(--color);
+    margin: 15px;
+}
+ul li a{
+    color: var(--color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+a:active{
+    color: var(--second);
+}
