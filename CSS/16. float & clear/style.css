@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 250px;
+    float:right;
+}
+.card{
+    border: 2px solid red;
+}
+.cards{
+    border: 5px solid green;
+    /* test the display property flow-root by decreasing the text size */
+    display: flow-root;
+}
+.card:nth-child(3){
+    /* it allows float in left not in right */
+    /* clear: right; */
+    /* it allows float in right not in left */
+    /* clear: left; */
+    /* it doesn't allows float in both right and left  */
+    clear: both;
+}

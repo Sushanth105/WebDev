@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box:nth-child(even){
+    background-color: red;
+}
+.boxs::before{
+    content: "my name is suhanth";
+}
+/* .box::before{
+    content: "my name is suhanth";
+} */
+::selection{
+    color: aqua;
+}
+.box::first-letter{
+    color: peru;
+}
+input{
+    margin: 5px;
+}
+input::placeholder{
+    color: aquamarine;
+}

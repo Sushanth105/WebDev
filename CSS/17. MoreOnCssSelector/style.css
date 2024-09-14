@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box:first-child::first-line{
+    background-color: aqua;
+}
+.boxs *{
+    border: 2px solid greenyellow;
+}
+[data-color="prime"]{
+    background-color: blue;
+}
