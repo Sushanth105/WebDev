@@ -3,9 +3,9 @@
     padding: 0;
 }
 :root{
-    --first: rgb(24, 194, 240);
+    --first: black;
     --color: white;
-    --second: rgb(150, 230, 252);
+    --second: rgb(95, 93, 93);
 }
 body{
     background-color: var(--second);
@@ -19,7 +19,7 @@ nav ul{
 }
 nav ul li{
     color: var(--color);
-    margin: 15px;
+    padding: 20px;
 }
 ul li a{
     color: var(--color);
@@ -29,4 +29,7 @@ ul li a{
 }
 a:active{
     color: var(--second);
+}
+li:hover{
+    background-color:rgb(50, 50, 50);
 }
