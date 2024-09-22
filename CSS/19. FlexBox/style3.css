@@ -6,12 +6,16 @@
     display: flex;
     border: 2px solid greenyellow;
     height: 50vh;
-    justify-content: center;
-    align-items: center;
+    align-content: center;
+    /* flex-flow: row wrap; */
+    /* flex-flow: row wrap-reverse; */
+    /* flex-flow: row-reverse wrap; */
+    flex-flow: row-reverse wrap-reverse;
 }
 .item{
     width: 60px;
     height: 60px;
     background-color: blue;
     margin: 10px;
+    text-align: center;
 }

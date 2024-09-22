@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    border: 2px solid greenyellow;
+    height: 50vh;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    /* gap bitwn the 2 box */
+    /* gap: 10px; */
+    /* if the value of row and colomn gap is equal then the it is eual to gap property */
+    row-gap: 10px;
+    column-gap: 10px;
+
+}
+.item{
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+    /* margin: 10px; */
+    text-align: center;
+}

@@ -6,12 +6,28 @@
     display: flex;
     border: 2px solid greenyellow;
     height: 50vh;
-    justify-content: center;
-    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.order-1{
+    order: 1;
+}
+.order-2{
+    order: 2;
+}
+.order-3{
+    order: 3;
+}
+.order-4{
+    order: 4;
+}
+.order--1{
+    order: -1;
 }
 .item{
     width: 60px;
     height: 60px;
     background-color: blue;
     margin: 10px;
+    text-align: center;
 }

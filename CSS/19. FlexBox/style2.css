@@ -6,12 +6,15 @@
     display: flex;
     border: 2px solid greenyellow;
     height: 50vh;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    /* align-items: center; */
+    /* there is no jestify item in flex box */
 }
 .item{
     width: 60px;
     height: 60px;
     background-color: blue;
     margin: 10px;
+    text-align: center;
 }

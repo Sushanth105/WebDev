@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    border: 2px solid greenyellow;
+    height: 50vh;   
+}
+
+.item {
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+    margin: 10px;
+    text-align: center;
+}
+.item1{
+    flex-grow: 1;
+    /* shrink is same as grow */
+    /* flex-shrink: 1; */
+}
+.item2{
+    flex-grow: 2;
+    /* in order to see the effect of shrink we have to decrease the screen width with the help of inspect mode */
+    /* flex-shrink: 2; */
+}
