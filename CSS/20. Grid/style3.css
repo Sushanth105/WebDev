@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    grid-template-areas: "nav nav nav" 
+                         "side article article"
+                         "footer footer footer";
+}
+.item{
+    border: 2px solid violet;
+    height: 50px;
+    /* width: 50px; */
+}
+.item1{
+    grid-area: nav;
+}
+.item2{
+    grid-area: side;
+}
+.item3{
+    grid-area: article;
+}
+.item4{
+    grid-area: article;
+}
+.item5{
+    grid-area: footer;
+}

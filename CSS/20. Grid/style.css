@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 100px 120px;
+    grid-template-rows: 100px 100px 100px;
+}
+.item{
+    background-color: violet;
+    height: 50px;
+    width: 50px;
+}
