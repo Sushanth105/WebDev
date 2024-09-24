@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+header{
+    position: sticky;
+    top: 0;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    padding: 10px;
+}
+nav ul li a{
+    color: black;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: gray
+}
+.down img{
+    width: 17px;
+    position: relative;
+    top: 4px;
+}
+main{
+    margin: 50px 0px;
+}
+.download{
+    text-align: center;
+}
+.download h1{
+    font-size: 48px;
+    font-weight: lighter;
+    padding: 20px;
+}
+.download h1 span{
+    font-weight: bold;
+}
+.download p{
+    font-size: 24px;
+    width: 52vw;
+    margin: 10px auto;
+    padding: 10px;
+}
+.download .dowbot{
+    margin: 30px 0px;
+}
+.download a{
+    color: white;
+    background-color: rgb(38, 194, 194);
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.download a:hover{
+    background-color: rgb(25, 151, 151);
+}
+.download a:active{
+    color: rgb(18, 102, 102);
+}
