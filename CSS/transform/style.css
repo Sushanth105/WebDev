@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 80vw;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 70px;
+}
+.box{
+    width: 70px;
+    height: 70px;
+    border: 2px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box1{
+    transform: rotate(40deg);
+    /* transform: rotate(0.25turn); */
+}
+.box2{
+    /* transform: rotateX(40deg); */
+    /* transform: rotatey(40deg); */
+    transform: rotatez(40deg);
+}
+.box3{
+    /* here the box becomes 1.5 times larger then original */
+    transform: scale(1.5);
+    /* transform: scale3d(2,2,2); */
+}
+.box4{
+    transform: skew(40deg);
+}
+.box5{
+    transform: translateX(50px);
+    /* transform: translateY(50px) */
+}
+.box6{
+    /* multipal transform in one */
+    transform: rotate(10deg) scale(1.3) skew(5deg);
+}
+.box7{
+    transform: rotate(40deg);
+    /* here it is axis */
+    /* the default is -50 -50 */
+    transform-origin: 0 0;
+}
