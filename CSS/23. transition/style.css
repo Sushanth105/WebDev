@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 50vh;
+    background-color:burlywood;
+    background-color:rgb(160, 222, 135);
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    /* transform: translateX(30vw) translateY(15vh); */
+    /* transition-property: background-color transform;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s; */
+    transition: background-color 3s ease-in-out 1s, transform 3s ease-in-out 1s;
+    /* transition: all 3s ease-in-out 1s; */
+}
+.tra{
+    transform: translateX(30vw) translateY(15vh);
+    background-color: blue;
+}
