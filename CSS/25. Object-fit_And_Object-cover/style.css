@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.image{
+    position: relative;
+    top: 250px;
+    left: 500px;
+    border: 2px solid brown;
+    width: 200px;
+    height: 200px;
+}
+.image img{
+    width: 200px;
+    height: 200px;
+    /* the object-fit is used to maintain the aspect ratio of the image */
+    /* and it deals with width and hight of the image container not on the parent container */
+    /* object-fit: contain; */
+    /* the 'fill' is the default property */
+    /* object-fit: fill; */ 
+    /* object-fit: none; */
+    object-fit: cover;
+    /* object-position: bottom right; */
+    object-position: -20px 6px;
+}
