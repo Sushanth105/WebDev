@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container img{
+    margin: 10px;
+}
+.image1{
+    filter:blur(2px);
+}
+.image2{
+    filter: brightness(250%);
+}
+.image3{
+    filter: contrast(200%);
+}
+.image4{
+    filter: grayscale(85%);
+}
+.image5{
+    filter: drop-shadow(10px 10px 20px blue);
+}
+.image6{
+    filter: invert(1);
+}
+.image7{
+    filter: opacity(80%);
+}
+.image8{
+    /* multiple property use */
+    filter: blur(2px) brightness(60%);
+}
