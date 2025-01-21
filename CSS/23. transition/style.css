@@ -12,7 +12,7 @@
     height: 100px;
     background-color: aqua;
     /* transform: translateX(30vw) translateY(15vh); */
-    /* transition-property: background-color transform;
+    /* transition-property: background-color , transform;
     transition-duration: 3s;
     transition-timing-function: ease-in-out;
     transition-delay: 1s; */
