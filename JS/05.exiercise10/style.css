@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Pacifico";
+}
+
+body{
+    background-color: green;
+}
+
+.box{
+    width: 30vw;
+    height: 50vh;
+    background-color: goldenrod;
+    margin:auto;
+    margin-top: 25vh;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box .heading{
+    font-size:50px;
+    color: red;
+    padding-top: 25px;
+    text-decoration: underline;
+}
+
+.box button{
+    padding: 15px;
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: large;
+    font-weight: 600;
+}
+
+.box button:hover{
+    background-color: rgb(110, 110, 252);
+    border-color: rgb(110, 110, 252);
+    cursor: pointer;
+}
+
+.box button:active{
+    background-color: blue;
+    border-color: blue;
+}
+
+#name{
+    max-width: 70%;
+    max-height: 70px;
+    width: 70%;
+    height: 70px;
+    background-color: bisque;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-weight: 700;
+}
