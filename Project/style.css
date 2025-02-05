@@ -21,7 +21,6 @@ body{
 @media only screen and ( max-width:1185px) {
     .main{
         width: 150vh;
-        height: 96vw;
     }
 }
 
@@ -252,8 +251,7 @@ body{
 
 .mr{
     margin: auto;
-    /* width: 1200px; */
-    width: 60%;
+    width: 1200px;
 }
 
 .mrtj{
@@ -298,8 +296,7 @@ body{
 
 .fa{
     margin: auto;
-    /* width: 1200px; */
-    width: 60%;
+    width: 1200px;
 }
 
 .faq{
@@ -311,6 +308,7 @@ body{
 .list3{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 7px;
 }
 
