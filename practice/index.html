@@ -5,32 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curved Bar Design</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #000000; /* Black background */
+        .green{
+            color: green;
         }
-
-        .curved-bar {
-            position: relative;
-            background: linear-gradient(to right, #ff0050, #800040); /* Gradient for the curve */
-            height: 9px; /* Adjust based on preference */
-            clip-path: ellipse(50% 100% at 50% 115%);
-        }   
-
-        .curved-bar-content {
-            /*position: r;
-            top: 1px; */
-            width: 100%;
-            height: 200px; /* Example height */
-            background: linear-gradient(to bottom, #1c1c34, #000); /* Gradient design below the bar */
+        .red{
+            color: red;
         }
     </style>
 </head>
 <body>
-    <div class="curved-bar"></div>
-    <div class="curved-bar-content">
-        <!-- Add content here if necessary -->
-    </div>
+    <div class="green red">hi</div>
+    
+    <script>
+            var a=document.querySelector(".green");
+            for(let i=0; i<4; i++){
+            var clone=a.cloneNode(true);
+            a.insertAdjacentElement("afterend",clone);
+            }
+    </script>
 </body>
 </html>
