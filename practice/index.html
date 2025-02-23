@@ -3,25 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curved Bar Design</title>
+    <title>Smooth Scroll to Top</title>
     <style>
-        .green{
-            color: green;
+        body {
+            font-family: Arial, sans-serif;
+            height: 2000px; /* Add height to enable scrolling */
+            padding: 20px;
+            background: linear-gradient(to bottom, #87CEFA, #f8f8f8);
         }
-        .red{
-            color: red;
+        .scroll-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none; /* Initially hidden */
+        }
+        .scroll-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="green red">hi</div>
-    
+
+    <h1>Scroll Down and Click the Button to Go Up</h1>
+    <p>Keep scrolling to see the button appear...</p>
+
+    <button class="scroll-button" id="scrollToTopBtn" onclick="smoothScrollToTop()">⬆ Scroll to Top</button>
+
     <script>
-            var a=document.querySelector(".green");
-            for(let i=0; i<4; i++){
-            var clone=a.cloneNode(true);
-            a.insertAdjacentElement("afterend",clone);
+        function smoothScrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        // Show the button when scrolled down
+        // window.onscroll = function() {
+        //     const btn = document.getElementById("scrollToTopBtn");
+        //     if (document.documentElement.scrollTop > 300) {
+        //         btn.style.display = "block";
+        //     } else {
+        //         btn.style.display = "none";
+        //     }
+        // };
+        window.onscroll = () => {
+            const btn = document.getElementById("scrollToTopBtn");
+            if (document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
             }
+        };
     </script>
+
 </body>
 </html>
