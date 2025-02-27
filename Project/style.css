@@ -20,7 +20,7 @@ body{
 
 @media only screen and ( max-width:1185px) {
     .main{
-        width: 150vh;
+        width: 180vh;
     }
 }
 
@@ -176,8 +176,9 @@ body{
 }
 
 .tn{
+    /* padding-left: 50px; */
     margin: auto;
-    width: 1200px;
+    width: 60vw;
 }
 
 .trandingNow{
@@ -250,6 +251,7 @@ body{
 }
 
 .mr{
+    padding-left: 50px;
     margin: auto;
     width: 1200px;
 }
