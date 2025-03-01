@@ -24,6 +24,7 @@ body{
     height: 90vh;
     margin: 7px;
     box-sizing: border-box;
+    position: relative;
     border-radius: 20px;
 }
 .right{
@@ -169,4 +170,70 @@ body{
 
 .content{
     display: flex;
+}
+
+.playHead{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.phleft{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.phead{
+    font-size: 16px;
+    font-weight: 700;
+    color: RGB(179,179,179);
+}
+
+.plus{
+    margin: 20px;
+}
+
+.ablinks{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.ablinks a{
+    color: RGB(179,179,179);
+    text-decoration: none;
+    font-size: small;
+    line-height: 20px;
+    margin: 5px;
+}
+
+.lang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(39, 39, 39);
+    margin: 30px auto;
+    padding: 7px 10px;
+    border: 2px solid rgb(173, 172, 172);
+    border-radius: 15px;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.lang:hover , .ablinks a:hover{
+    transform: scale(1.05);
+}
+
+.lang span {
+    display: flex;
+    align-items: center;
+}
+
+.bottom{
+    position: absolute;
+    bottom: 0;
 }
