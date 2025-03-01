@@ -6,11 +6,11 @@
 body{
     background-color: black;
     color: white;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
 }
 
 .navBar{
     height: 60px;
-    border: 2px solid red;
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -18,18 +18,28 @@ body{
 }
 
 .left{
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    background-color: rgb(39, 39, 39);
     width: 25vw;
-    height: 93vh;
+    height: 90vh;
     margin: 7px;
     box-sizing: border-box;
+    border-radius: 20px;
 }
 .right{
+    /* border: 2px solid red; */
     box-sizing: border-box;
-    border: 2px solid red;
+    background-color: rgb(39, 39, 39);
     width: 75vw;
-    height: 93vh;
+    height: 90vh;
     margin: 7px 7px 7px 0px;
+    border-radius: 20px;
+}
+
+.navLeft{
+    display: flex;
+    margin: 5px;
+    padding-right: 30px;
 }
 
 .navMid{
@@ -38,54 +48,123 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    position: relative;
+    left: 30px;
 }
 
 #home{
     height: 25px;
-}
-.navMid span{
-    display: flex;
     background-color: rgb(39, 39, 39);
     border-radius: 50%;
-    height: 45px;
-    width: 45px;
-    justify-content: center;
-    align-items: center;
+    padding: 9px;
+    cursor: pointer;
 }
+
+#home:hover{
+    transform: scale(1.05);
+}
+
 
 .searching{
     display: flex;
     background-color: rgb(39, 39, 39);
+    border-color: (39, 39, 39);
     padding: 9px;
     border-radius: 25px;
 }
 
+.searching:hover{
+    background-color: rgb(57, 57, 57) ;
+}
+
 #search{
-    background-color: rgb(39, 39, 39);;
-    border: solid rgb(39, 39, 39);;
+    background-color: inherit;
+    border: none;
     color: white;
     outline: none;
     width: 250px;
-}
-
-#searchLogo{
-    margin: 10px;
+    font-size: medium;
 }
 
 #seachLogo{
     height: 25px;
+    margin-right: 5px;
 }
 
 .browser{
     display: flex;
+    gap: 10px;
+    font-size: x-large;
+    font-weight: 100;
+}
+
+#file{
+    height: 25px;
+}
+
+#file:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .navRight{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navRight a{
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(173, 172, 172);
+    text-decoration: none;
+}
+
+.navRight a:hover{
+    transform: scale(1.05);
+    color: white;
+}
+
+.links{
+    display: flex;
+    gap: 10px;
+}
+
+.installing{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.installing span{
+    font-size: x-large;
+}
+
+.connect{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logIn{
+    padding: 13px 25px;
+    border-radius: 40px;
+    border: none;
+    margin: 0px 5px ;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif ;
+}
+
+.logIn:hover{
+    transform: scale(1.05);
 }
 
 #logo{
     margin-left: 30px;
+    margin-right: 5px;
+    cursor: pointer;
 }
 
 .content{
