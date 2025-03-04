@@ -182,17 +182,29 @@ body{
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 20px;
+    margin: 20px 0px 20px 20px;
 }
 
+
 .phead{
+    cursor: pointer;
     font-size: 16px;
     font-weight: 700;
     color: RGB(179,179,179);
 }
 
+.phead:hover{
+    color: white;
+}
 .plus{
-    margin: 20px;
+    padding: 10px;
+    margin: 20px 20px 20px 0px;
+}
+
+.plus:hover{
+    background-color: rgb(59, 59, 59);
+    padding: 10px;
+    border-radius: 50%;
 }
 
 .ablinks{
@@ -236,4 +248,4 @@ body{
 .bottom{
     position: absolute;
     bottom: 0;
-}
+}   
