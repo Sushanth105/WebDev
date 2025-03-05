@@ -250,31 +250,36 @@ body{
     bottom: 0;
 }   
 
-.artist{
+.artist , .song{
     margin: 25px;
 }
 
-.artheading{
+.artheading , .sheading{
     font-size: 24px;
     font-weight: 700;
+}
+
+.artheading:hover , .sheading:hover{
     text-decoration: underline;
 }
 
-.artboxs{
+.artboxs , .songboxs{
     display: flex;
-    margin-top: 5px;
+    margin-top: 10px;
     overflow:scroll;
     scrollbar-width: none;
 }
-.artbox{
+.artbox , .songbox{
+    position: relative;
     width: 100%;
-    height: 290px;
+    height: 299px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
 }
 
-.artbox:hover{
+.artbox:hover , .songbox:hover{
     background: linear-gradient(to bottom, rgb(39, 39, 39)
     , #464646);
 }
@@ -288,6 +293,7 @@ body{
     background-position: center;
     width: 220px;
     height: 220px;
+    box-shadow: 4px 4px 20px black;
 }
 
 .circle img{
@@ -299,6 +305,13 @@ body{
     bottom: 0px;
     display: none;
     right: 0px;
+    cursor: pointer;
+}
+
+.circle img:hover{
+    transform: scale(1.07);
+    background-color: rgb(100, 252, 100);
+    transition: transform , 0.25s;
 }
 
 #c1{
@@ -318,4 +331,32 @@ body{
 }
 #c6{
     background-image: url("Images/img6.jpeg");
+}
+
+.artDetail{
+    margin: 0px 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.artist_name{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.artist_name:hover{
+    text-decoration: underline;
+}
+
+.artist_type{
+    font-size: 12px;
+    color: rgb(173, 172, 172);
+}
+
+.song{
+    margin-top: 60px;
 }
