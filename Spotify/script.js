@@ -32,24 +32,89 @@ async function main(){
         e.preventDefault();
         e.currentTarget.scrollLeft += e.deltaY
     })
+    
     // fetching the song & image folder and storing the song links in songs and images
-    let response1 = await fetch('Songs');
-    let songDiv =document.createElement("div");
-    songDiv.innerHTML=await response1.text()
-    let response2 = await fetch('SImage');
-    let imageDiv =document.createElement("div");
-    imageDiv.innerHTML = await response2.text()
 
-    let songs = songDiv.getElementsByTagName("a");
-    let images = imageDiv.getElementsByTagName("a");
+    let songImage ={
+        1 : {
+            name : 'Belageddu',
+            song : "Songs/Belageddu.mp3",
+            image : "SImage/Belageddu.jpeg"
+        },
+        2 : {
+            name : 'Bisilu Kudureyondu',
+            song : "Songs/BisiluKudureyondu.mp3",
+            image : "SImage/BisiluKudureyondu.jpeg"
+            
+        },
+        3 : {
+            name : 'Butta Bomma',
+            song : "Songs/ButtaBomma.mp3",
+            image : "SImage/ButtaBomma.jpeg"  
+        },
+        4 : {
+            name : 'Chammak Challo',
+            song : "Songs/ChammakChallo.mp3",
+            image : "SImage/ChammakChallo.jpeg"
+        },
+        5 : {
+            name : 'Coca Cola',
+            song : "Songs/CocaCola.mp3",
+            image : "SImage/CocaCola.jpeg" 
+        },
+        6 : {
+            name : 'Illuminati',
+            song : "Songs/Illuminati.mp3",
+            image : "SImage/Illuminati.jpeg"
+        },
+        7 : {
+            name : 'Kutty Story',
+            song : "Songs/KuttyStory.mp3",
+            image : "SImage/KuttyStory.png"
+        },
+        8 : {
+            name : 'Lungi Dance',
+            song : "Songs/LungiDance.mp3",
+            image : "SImage/LungiDance.jpeg"
+        },
+        9 : {
+            name : 'Manasilaayo',
+            song : "Songs/Manasilaayo.mp3",
+            image : "SImage/Manasilaayo.jpeg"
+            
+        },
+        10 : {
+            name : 'One Two Three',
+            song : "Songs/OneTwoThree.mp3",
+            image : "SImage/OneTwoThree.jpeg"
+            
+        },
+        11 : {
+            name : 'Saree Ke Fall Sa',
+            song : "Songs/SareeKeFallSa.mp3",
+            image : "SImage/SareeKeFallSa.jpeg"
+            
+        },
+        12 : {
+            name : 'What Jhumka',
+            song : "Songs/WhatJhumka.mp3",
+            image : "SImage/WhatJhumka.jpeg"
+            
+        },
+        13 : {
+            name : 'Why This Kolaveri Di',
+            song : "Songs/WhyThisKolaveriDi.mp3",
+            image : "SImage/WhyThisKolaveriDi.jpeg"
+
+        }
+    }
 
     let songbox = document.querySelectorAll(".songbox");
-    for(let i=1; i<images.length; i++){
-        document.getElementById(`s${i}`).style.backgroundImage= `url(${images[i].href})`;
+    for(let i=1; i<=Object.keys(songImage).length; i++){
+        document.getElementById(`s${i}`).style.backgroundImage= `url(${songImage[`${i}`].image})`;
         let songName = document.createElement("div");
         songName.className="songName";
-        let s = images[i].innerText;
-        songName.innerText = s.slice(0,s.length-5)
+        songName.innerText = songImage[`${i}`].name;
         songbox[i-1].appendChild(songName)
     }
 }
