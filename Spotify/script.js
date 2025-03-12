@@ -124,7 +124,7 @@ async function main(){
     let playPause=document.querySelectorAll(".square")
     for(let i=0; i<playPause.length; i++){
         playPause[i].children[0].addEventListener("click",(e)=>{
-            if(currentSongPlay && currentSongPlay.src.slice(30) === songImage[i+1].song){
+            if(currentSongPlay && `${currentSongPlay.src}`.includes(songImage[i+1].song)){
                 currentSongPlay.pause();
                 currentSongPlay.currentTime = 0;
                 currentSongPlay = null;
