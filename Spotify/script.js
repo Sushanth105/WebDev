@@ -45,8 +45,7 @@ async function main(){
 
     let songbox = document.querySelectorAll(".songbox");
     for(let i=1; i<images.length; i++){
-        let imageLoc = images[i].href.slice(30)
-        document.getElementById(`s${i}`).style.backgroundImage= `url(${imageLoc})`;
+        document.getElementById(`s${i}`).style.backgroundImage= `url(${images[i].href})`;
         let songName = document.createElement("div");
         songName.className="songName";
         let s = images[i].innerText;
