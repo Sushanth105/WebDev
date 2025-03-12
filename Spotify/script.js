@@ -33,10 +33,10 @@ async function main(){
         e.currentTarget.scrollLeft += e.deltaY
     })
     // fetching the song & image folder and storing the song links in songs and images
-    let response1 = await fetch('http://127.0.0.1:3000/Spotify/Songs');
+    let response1 = await fetch('Songs');
     let songDiv =document.createElement("div");
     songDiv.innerHTML=await response1.text()
-    let response2 = await fetch('http://127.0.0.1:3000/Spotify/SImage');
+    let response2 = await fetch('SImage');
     let imageDiv =document.createElement("div");
     imageDiv.innerHTML = await response2.text()
 
