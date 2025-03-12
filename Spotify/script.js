@@ -24,12 +24,12 @@ async function main(){
     // vertical Scrolling in both boxes
     let artboxs = document.querySelector(".artboxs");
     artboxs.addEventListener("wheel",(e)=>{
-        e.preventDefault();
+        // e.preventDefault();
         e.currentTarget.scrollLeft += e.deltaY;
     })
     let songboxs = document.querySelector(".songboxs");
     songboxs.addEventListener("wheel",(e)=>{
-        e.preventDefault();
+        // e.preventDefault();
         e.currentTarget.scrollLeft += e.deltaY
     })
     
@@ -116,6 +116,34 @@ async function main(){
         songName.className="songName";
         songName.innerText = songImage[`${i}`].name;
         songbox[i-1].appendChild(songName)
+    }
+
+    let currentSongPlay = null;
+    let priSong = null;
+
+    let playPause=document.querySelectorAll(".square")
+    for(let i=0; i<playPause.length; i++){
+        playPause[i].children[0].addEventListener("click",(e)=>{
+            if(currentSongPlay && currentSongPlay.src.slice(30) === songImage[i+1].song){
+                currentSongPlay.pause();
+                currentSongPlay.currentTime = 0;
+                currentSongPlay = null;
+                priSong =null
+                playPause[i].children[0].src="Images/play.svg"
+            }
+            else{
+                if(currentSongPlay){
+                    currentSongPlay.pause();
+                    currentSongPlay.currentTime = 0;
+                    playPause[priSong].children[0].src="Images/play.svg"
+                }
+                let audio = new Audio(songImage[i + 1].song);
+                audio.play()
+                currentSongPlay = audio;
+                priSong = i;
+                playPause[i].children[0].src="Images/pause.svg"
+            }
+        });
     }
 }
 
