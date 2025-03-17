@@ -35,6 +35,7 @@ body{
     height: 90vh;
     margin: 7px 7px 7px 0px;
     border-radius: 20px;
+    overflow-y: scroll;
 }
 
 .navLeft{
@@ -387,4 +388,61 @@ body{
 
 .square img{
     margin: 10px;
+}
+
+.list{
+    cursor: pointer;
+}
+
+.playContent{
+    margin: 20px;
+    font-size: large;
+    color: rgb(173, 172, 172);
+}
+
+.list{
+    margin: 10px 0px;
+}
+
+.list:hover{
+    text-decoration: underline;
+}
+
+.songBar{
+    width: 85%;
+    height: 80px;
+    background-color: black;
+    margin: auto;
+    border-radius: 30px;
+    position: sticky;
+    bottom: 10px;
+}
+
+#songRange{
+    position: relative;
+    top: 10px;
+    margin: auto;
+    display: block;
+    width: 90%;
+}
+
+.durations{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.operations{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.previous:hover , .Oplay:hover , .Opause:hover , .next:hover{
+    transform: scale(1.075);
+    cursor: pointer;
 }
