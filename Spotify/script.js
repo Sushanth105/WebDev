@@ -238,10 +238,12 @@ async function main() {
         if (e.target.src.includes("Opause")) {
             e.target.src = "Images/Oplay.svg";
             currentSongPlay.pause();
+            playPause[priSong].children[0].src = "Images/play.svg";
         }
         else if (e.target.src.includes("Oplay")) {
             e.target.src = "Images/Opause.svg";
             currentSongPlay.play();
+            playPause[priSong].children[0].src = "Images/pause.svg";
         }
     })
 
