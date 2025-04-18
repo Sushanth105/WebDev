@@ -149,18 +149,21 @@ function App() {
 
   const TaskList = (props) => {
     return (
-      <div className=' border-2 border-amber-400 rounded-3xl flex m-4 justify-between'>
-        <div className=' flex justify-center items-center'>
-          <input onChange={() => { HandleCheck(props.id) }} checked={props.completed} type="checkbox" name="check" id="check" className=' scale-150 m-4' />
-          <div style={props.completed ? { textDecoration: "line-through" } : {}} className='text-[20px] text-amber-400'>{props.task}</div>
+      <div className='border-2 border-amber-400 rounded-3xl flex m-4 justify-between p-2'>
+        <div className='flex items-center space-x-4 flex-wrap'>
+          <input onChange={() => { HandleCheck(props.id) }} checked={props.completed} type="checkbox" name="check" id="check" className='scale-150 m-4' />
+          <div style={props.completed ? { textDecoration: "line-through" } : {}} className='text-[20px] text-amber-400 border-2 sm:w-75 md:w-105 lg:w-160 xl:w-220 2xl:w-275 w-25 overflow-auto'>
+            {props.task}
+          </div>
         </div>
-        <div className='flex'>
-          <button onClick={() => { handleEdit(props.id) }} className='border-2 border-amber-400 rounded-3xl px-5 m-2 cursor-pointer text-amber-400 hover:bg-amber-400 hover:text-white active:bg-amber-100 active:text-amber-400'>Edit</button>
-          <button onClick={() => { handleDelete(props.id) }} className='border-2 border-amber-400 rounded-3xl px-5 m-2 cursor-pointer text-amber-400 hover:bg-amber-400 hover:text-white active:bg-amber-100 active:text-amber-400'>Delete</button>
+        <div className='flex gap-2'>
+          <button onClick={() => { handleEdit(props.id) }} className='border-2 border-amber-400 rounded-3xl px-4 py-2 cursor-pointer text-amber-400 hover:bg-amber-400 hover:text-white active:bg-amber-100 active:text-amber-400' > Edit </button>
+          <button onClick={() => { handleDelete(props.id) }} className='border-2 border-amber-400 rounded-3xl px-4 py-2 cursor-pointer text-amber-400 hover:bg-amber-400 hover:text-white active:bg-amber-100 active:text-amber-400' > Delete </button>
         </div>
       </div>
-    )
-  }
+    );
+  };
+  
 
   return (
     <div>
