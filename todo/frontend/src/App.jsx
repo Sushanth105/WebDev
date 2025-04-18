@@ -11,7 +11,7 @@ function App() {
 
   async function fetchData() {
     try {
-      let a = await fetch("http://localhost:3000/send")
+      let a = await fetch("https://todo-backend-vah2.onrender.com/send")
       if (!a.ok) {
         throw new Error("Error while fetching");
       }
@@ -24,7 +24,7 @@ function App() {
 
   async function addData(task) {
     try {
-      const response = await fetch("http://localhost:3000/add", {
+      const response = await fetch("https://todo-backend-vah2.onrender.com/add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -42,7 +42,7 @@ function App() {
 
   async function updateData(task) {
     try {
-      const response = await fetch("http://localhost:3000/update", {
+      const response = await fetch("https://todo-backend-vah2.onrender.com/update", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json"
@@ -60,7 +60,7 @@ function App() {
 
   async function deleteData(task) {
     try {
-      const response = await fetch("http://localhost:3000/delete", {
+      const response = await fetch("https://todo-backend-vah2.onrender.com/delete", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json"
