@@ -152,7 +152,7 @@ function App() {
       <div className='border-2 border-amber-400 rounded-3xl flex m-4 justify-between p-2'>
         <div className='flex items-center space-x-4 flex-wrap'>
           <input onChange={() => { HandleCheck(props.id) }} checked={props.completed} type="checkbox" name="check" id="check" className='scale-150 m-4' />
-          <div style={props.completed ? { textDecoration: "line-through" } : {}} className='text-[20px] text-amber-400 border-2 sm:w-75 md:w-105 lg:w-160 xl:w-220 2xl:w-275 w-25 overflow-auto'>
+          <div style={props.completed ? { textDecoration: "line-through" } : {}} className='text-[20px] text-amber-400 sm:w-75 md:w-105 lg:w-160 xl:w-220 2xl:w-275 w-25 overflow-auto'>
             {props.task}
           </div>
         </div>
