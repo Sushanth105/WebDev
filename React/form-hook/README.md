@@ -105,5 +105,3 @@ When you use register, you can pass custom error messages:
 > - You can even integrate with Yup or Zod for schema-based validation
 
 ---
-
-

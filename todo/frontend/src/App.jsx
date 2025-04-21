@@ -133,11 +133,11 @@ function App() {
   }
 
   const HandleCheck = async (id) => {
-    // setTasks(
-    //   tasks.map((task) => {
-    //     return task.id == id ? { ...task, completed: !task.completed } : task
-    //   })
-    // )
+    setTasks(
+      tasks.map((task) => {
+        return task.id == id ? { ...task, completed: !task.completed } : task
+      })
+    )
     const newTaskObj = {
       id: id,
       taskDetail: tasks.find((task) => { return task.id === id}).taskDetail,
