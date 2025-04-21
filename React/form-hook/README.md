@@ -81,5 +81,29 @@ You can do more programmatically:
 
 ---
 
+## How to Add Custom Error Messages
+When you use register, you can pass custom error messages:
+```jsx
+<input
+  {...register("email", {
+    required: "Email is required",
+    pattern: {
+      value: /^\S+@\S+$/i,
+      message: "Invalid email format"
+    }
+  })}
+/>
+
+{errors.email && <p>{errors.email.message}</p>}
+```
+---
+
 > [!TIP]
-> Helpful advice for doing things better or more easily.
+> - Works with controlled or uncontrolled components
+> - Minimal re-renders improve performance
+> - Works with custom inputs too (like select, date pickers, etc.)
+> - You can even integrate with Yup or Zod for schema-based validation
+
+---
+
+
