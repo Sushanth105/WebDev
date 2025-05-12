@@ -26,16 +26,16 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         await connectDB();
         const user = await User.find({ email }).select("+password");
 
-        if (!user) {
-          throw new Error("Invalid email or password");
+        if (!user || user.length === 0) {
+          throw new CredentialsSignin("Invalid email or password");
         }
 
         if (!user[0].password) {
-          throw new Error("Invalid email or password");
+          throw new CredentialsSignin("Invalid email or password");
         }
         const isMatched = await bcrypt.compare(password, user[0].password);
         if (!isMatched) {
-          throw new Error("Invalid email or password");
+          throw new CredentialsSignin("Invalid email or password");
         }
         const userData = {
           name: user[0].name,
@@ -49,7 +49,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   ],
   pages: {
     signIn: "/signin",
-    // error: "/signin?error=true"
+    error : "/signin"
   },
   callbacks: {
     async session({ session, token }) {
@@ -62,43 +62,51 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async jwt({ token, user }) {
       // Attach the user ID to the JWT token
       if (user) {
-        const existingUser = await User.findOne({ email: user.email });
-        if (existingUser) {
-          token.id = existingUser._id.toString(); // Use the database `_id`
+        try {
+          await connectDB();
+          const existingUser = await User.findOne({ email: user.email });
+          if (existingUser) {
+            token.id = existingUser._id.toString(); // Use the database `_id`
+          }
+        } catch (error) {
+          console.error("Error in JWT callback:", error);
         }
       }
       return token;
     },
     signIn: async ({ user, account }) => {
       if (account?.provider === "google") {
-        await connectDB();
-        const existingUser = (await User.findOne({ email: user?.email })) as {
-          _id: string;
-          image: string;
-          authProviderId: string;
-        };
-        if (existingUser) {
-          console.log("User alredy exist");
-          // if(!existingUser.authProviderId){
-          //   return false
-          // }
-          if (existingUser.image === "") {
-            await User.updateOne(
-              { _id: existingUser._id },
-              { $set: { image: user?.image } }
-            );
+        try {
+          await connectDB();
+          const existingUser = await User.findOne({ email: user?.email });
+          
+          if (existingUser) {
+            console.log("User already exists");
+            if (existingUser.image === "") {
+              await User.updateOne(
+                { _id: existingUser._id },
+                { $set: { image: user?.image } }
+              );
+            }
+            return true;
           }
-          return true;
+          
+          const newUser = new User({
+            name: user?.name,
+            email: user?.email,
+            image: user?.image,
+            authProviderId: user?.id,
+          });
+          await newUser.save();
+        } catch (error) {
+          console.error("Error in signIn callback:", error);
+          return false;
         }
-        const newUser = new User({
-          name: user?.name,
-          email: user?.email,
-          image: user?.image,
-          authProviderId: user?.id,
-        });
-        await newUser.save();
       }
       return true;
     },
   },
 });
+
+// Explicitly set this to use Node.js runtime
+export const runtime = "nodejs";
